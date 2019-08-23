@@ -12,5 +12,4 @@ public class TechController {
     public ResponseEntity<String> getHealthInfo() {
         return ResponseEntity.ok("ok");
     }
-
 }
