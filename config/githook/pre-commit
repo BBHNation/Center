@@ -3,7 +3,6 @@ set -x
 # From gist at https://gist.github.com/chadmaughan/5889802
 
 # run the tests with the gradle wrapper
-./gradlew goJF
 ./gradlew verifyGoogleJavaFormat
 
 # store the last exit code in a variable
