@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <Match>
+        <!-- 模糊匹配： ~ 之后为 Java 正则表达式 -->
+        <Class name="~.*\.jooq\..*" />
+    </Match>
+</FindBugsFilter>
