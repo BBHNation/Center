@@ -1,0 +1,15 @@
+task installGitHooks(type: Copy) {
+    from new File(rootProject.rootDir, 'config/githook/pre-push')
+    into {
+        new File(rootProject.rootDir, '.git/hooks')
+    }
+    fileMode 0755
+
+    from new File(rootProject.rootDir, 'config/githook/pre-commit')
+    into {
+        new File(rootProject.rootDir, '.git/hooks')
+    }
+    fileMode 0755
+}
+
+compileJava.dependsOn installGitHooks
