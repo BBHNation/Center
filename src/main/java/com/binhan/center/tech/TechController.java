@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("tech")
 public class TechController {
+
+    /**
+     * @return health status.
+     * */
     @GetMapping("/health")
     public ResponseEntity<String> getHealthInfo() {
         return ResponseEntity.ok("ok");
