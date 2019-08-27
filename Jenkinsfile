@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo \'hello world\'
 pwd
-bash test.sh'''
+ls'''
       }
     }
   }
