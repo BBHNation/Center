@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       steps {
         sh '''echo \'hello world\'
-pwd'''
+pwd
+gradle clean'''
       }
     }
   }
