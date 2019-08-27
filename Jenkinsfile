@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo \'hello world\'
 pwd
-gradle clean'''
+bash test.sh'''
       }
     }
   }
