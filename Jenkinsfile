@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'gradle wrapper clean'
+        sh 'echo "$USER"'
       }
     }
   }
