@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'gradlew clean'
+        sh 'gradle wrapper clean'
       }
     }
   }
