@@ -15,8 +15,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh '''echo \'deploy\'
-sudo mkdir /var/build
-cp /var/jenkins_home/workspace/Center_master/build/libs/*.jar /var/build'''
+cp /var/jenkins_home/workspace/Center_master/build/libs/*.jar /var/tmp'''
       }
     }
   }
