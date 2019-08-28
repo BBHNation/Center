@@ -6,5 +6,10 @@ pipeline {
         sh './gradlew clean'
       }
     }
+    stage('test') {
+      steps {
+        sh './gradle test'
+      }
+    }
   }
 }
