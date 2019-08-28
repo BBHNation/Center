@@ -7,7 +7,7 @@ pipeline {
 echo \'hello\'
 ls
 pwd
-bash echo $PATH
+bash $PATH
 bash gradle clean'''
       }
     }
