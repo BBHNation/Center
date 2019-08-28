@@ -3,12 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''bash
-echo \'hello\'
-ls
-pwd
-$PATH
-bash gradle clean'''
+        sh 'gradlew clean'
       }
     }
   }
