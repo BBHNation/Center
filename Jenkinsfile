@@ -14,7 +14,9 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh 'echo \'deploy\''
+        sh '''echo \'deploy\'
+mkdir /var/build
+cp /var/jenkins_home/workspace/Center_master/build/libs/*.jar /var/build'''
       }
     }
   }
