@@ -14,4 +14,10 @@ public class TechController {
     public ResponseEntity<String> getHealthInfo() {
         return ResponseEntity.ok("ok");
     }
+
+    /** @return my info. */
+    @GetMapping("/whoami")
+    public ResponseEntity<String> getMyInfo() {
+        return ResponseEntity.ok("I am Hancock");
+    }
 }
