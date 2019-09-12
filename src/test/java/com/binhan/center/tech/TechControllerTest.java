@@ -16,10 +16,9 @@ import org.junit.Test;
 public class TechControllerTest extends WebApiTest {
 
     @Test
-    public void should_when_given() throws IOException {
+    public void shouldReturnSuccess_whenRequestHealth() throws IOException {
         // given
-        HttpUriRequest request =
-                new HttpGet("http://localhost:" + super.getPort() + "/tech/health");
+        HttpUriRequest request = new HttpGet("http://localhost:" + this.port + "/tech/health");
 
         // when
         HttpResponse response = HttpClientBuilder.create().build().execute(request);
