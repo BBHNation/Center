@@ -22,4 +22,8 @@ public class WeekPlanApplicationService {
                 .map(WeekPlanEntity::mapToDomain)
                 .collect(Collectors.toList());
     }
+
+    public void createWeekPlan(WeekPlan weekPlan) {
+        weekPlanRepository.save(new WeekPlanEntity(weekPlan));
+    }
 }

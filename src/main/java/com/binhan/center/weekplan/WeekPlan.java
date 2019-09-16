@@ -19,4 +19,11 @@ public class WeekPlan {
     private String award;
 
     private String punishment;
+
+    public WeekPlan(int weekNum, String content, String award, String punishment) {
+        this.weekNum = weekNum;
+        this.content = content;
+        this.award = award;
+        this.punishment = punishment;
+    }
 }
