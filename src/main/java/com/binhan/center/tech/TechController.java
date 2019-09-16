@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("tech")
+@RequestMapping("/tech")
 public class TechController {
 
     /** @return health status. */

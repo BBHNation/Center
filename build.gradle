@@ -24,6 +24,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
 	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
+	annotationProcessor('org.projectlombok:lombok')
+	compile('org.projectlombok:lombok')
 }
 
 jar {
