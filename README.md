@@ -1,2 +1,9 @@
 # This is a Center Server for me.
-These's no function now, but I will add some infrastructures.
+
+## Module ONE: Week Plan & Summary Application.
+A application that record week plan and summary. To follow one work job and learning step.
+
+**Domain:** 
+    
+    - WeekPlan
+    - WeekSummary
