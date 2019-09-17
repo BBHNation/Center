@@ -4,7 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum ExceptionCode {
-    WEEK_PLAN_NOT_FOUND(10001, "week plan not found.");
+    WEEK_PLAN_NOT_FOUND(10001, "week plan not found."),
+    WEEK_SUMMARY_NOT_FOUND(10002, "week summary not found.");
 
     private final int code;
     private final String message;

@@ -15,4 +15,8 @@ public class NotFoundException extends RuntimeException {
     public static Supplier<NotFoundException> weekplanNotFoundException() {
         return () -> new NotFoundException(ExceptionCode.WEEK_PLAN_NOT_FOUND);
     }
+
+    public static Supplier<NotFoundException> weekSummaryNotFoundException() {
+        return () -> new NotFoundException(ExceptionCode.WEEK_SUMMARY_NOT_FOUND);
+    }
 }

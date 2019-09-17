@@ -21,9 +21,9 @@ public class WeekPlanController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity createWeekPlan(@RequestBody @Valid CreateWeekPlanRequest request) {
-        weekPlanApplicationService.createWeekPlan(request.mapToDomain());
-        return ResponseEntity.ok().build();
+    public ResponseEntity<String> createWeekPlan(
+            @RequestBody @Valid CreateWeekPlanRequest request) {
+        return ResponseEntity.ok(weekPlanApplicationService.createWeekPlan(request.mapToDomain()));
     }
 
     @GetMapping("/all")

@@ -33,7 +33,7 @@ public class WeekPlanApplicationService {
                 .collect(Collectors.toList());
     }
 
-    void createWeekPlan(WeekPlan weekPlan) {
-        weekPlanRepository.save(new WeekPlanEntity(weekPlan));
+    String createWeekPlan(WeekPlan weekPlan) {
+        return weekPlanRepository.save(new WeekPlanEntity(weekPlan)).getId();
     }
 }
