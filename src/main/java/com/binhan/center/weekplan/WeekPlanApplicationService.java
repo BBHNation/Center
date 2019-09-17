@@ -4,6 +4,8 @@ import com.binhan.center.infrastructure.weekplan.WeekPlanEntity;
 import com.binhan.center.infrastructure.weekplan.WeekPlanRepository;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,15 +17,15 @@ public class WeekPlanApplicationService {
         this.weekPlanRepository = weekPlanRepository;
     }
 
-    public List<WeekPlan> allWeekPlans() {
+    List<WeekPlan> allWeekPlans() {
         return weekPlanRepository
-                .findAll()
+                .findAll(new Sort(Direction.ASC, "weekNum"))
                 .stream()
                 .map(WeekPlanEntity::mapToDomain)
                 .collect(Collectors.toList());
     }
 
-    public void createWeekPlan(WeekPlan weekPlan) {
+    void createWeekPlan(WeekPlan weekPlan) {
         weekPlanRepository.save(new WeekPlanEntity(weekPlan));
     }
 }
