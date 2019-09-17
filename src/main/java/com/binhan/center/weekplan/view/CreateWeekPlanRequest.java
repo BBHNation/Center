@@ -1,6 +1,7 @@
 package com.binhan.center.weekplan.view;
 
 import com.binhan.center.weekplan.WeekPlan;
+import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,11 +12,11 @@ import lombok.Setter;
 public class CreateWeekPlanRequest {
     private int weekNum;
 
-    private String content;
+    @NotBlank private String content;
 
-    private String award;
+    @NotBlank private String award;
 
-    private String punishment;
+    @NotBlank private String punishment;
 
     public WeekPlan mapToDomain() {
         return new WeekPlan(weekNum, content, award, punishment);

@@ -1,5 +1,6 @@
 package com.binhan.center.weekplan;
 
+import com.binhan.center.infrastructure.exception.NotFoundException;
 import com.binhan.center.infrastructure.weekplan.WeekPlanEntity;
 import com.binhan.center.infrastructure.weekplan.WeekPlanRepository;
 import java.util.List;
@@ -15,6 +16,13 @@ public class WeekPlanApplicationService {
 
     public WeekPlanApplicationService(WeekPlanRepository weekPlanRepository) {
         this.weekPlanRepository = weekPlanRepository;
+    }
+
+    WeekPlan findWeekPlanById(String weekplanId) {
+        return weekPlanRepository
+                .findById(weekplanId)
+                .orElseThrow(NotFoundException.weekplanNotFoundException())
+                .mapToDomain();
     }
 
     List<WeekPlan> allWeekPlans() {
