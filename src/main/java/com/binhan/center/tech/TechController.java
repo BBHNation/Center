@@ -1,5 +1,6 @@
 package com.binhan.center.tech;
 
+import com.binhan.center.TestKotlin;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,5 +20,11 @@ public class TechController {
     @GetMapping("/whoami")
     public ResponseEntity<String> getMyInfo() {
         return ResponseEntity.ok("I am Hancock");
+    }
+
+    /** @return test one kotlin func. */
+    @GetMapping("/testKotlin")
+    public ResponseEntity<Integer> getKotlinInfo() {
+        return ResponseEntity.ok(new TestKotlin().inc(0));
     }
 }
