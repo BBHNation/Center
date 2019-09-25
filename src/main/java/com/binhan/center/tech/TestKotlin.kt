@@ -1,4 +1,4 @@
-package com.binhan.center
+package com.binhan.center.tech
 
 class TestKotlin {
     fun inc(i: Int): Int {
